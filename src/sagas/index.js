@@ -9,9 +9,10 @@ import {
 
 export const api = (url) => fetch(url).then(response => response.json());
 
+const MOVIES_API_KEY = process.env.REACT_APP_KEY || '37051ea49d70092be42ce6efa129fe6d';
 
-const GENRES_URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.MOVIES_API_KEY}&language=en-US`;
-const MOVIES_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=37051ea49d70092be42ce6efa129fe6d&language=en-US&page=1`;
+const GENRES_URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${MOVIES_API_KEY}&language=en-US`;
+const MOVIES_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${MOVIES_API_KEY}&language=en-US&page=1`;
 
 function* fetchApiData() {
     try {
