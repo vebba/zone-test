@@ -1,0 +1,13 @@
+.container {
+    flex: 0 0 170px;
+    max-width: 170px;
+    padding-bottom: 1rem;
+}
+.container h4 {
+    white-space: nowrap;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+}

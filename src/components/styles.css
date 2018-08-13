@@ -1,0 +1,17 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+}
+.listItem {
+    flex:1;
+    padding: 1.2rem;
+    flex-basis: 0;
+
+
+}
+
+.listItem img {
+}
