@@ -1,10 +1,10 @@
 import {connect} from 'react-redux';
 import ListComponent from "./ListComponent";
-import {getFilteredMovies} from "../reducers/selectors";
+import {moviesByPopularity} from "../reducers/selectors";
 
 const mapStateToProps = state => (
     {
-        items: getFilteredMovies(state),
+        items: moviesByPopularity(state),
         genres: state.genres
     }
 );

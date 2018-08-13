@@ -10,7 +10,7 @@ const Poster = ({url}) => (
 export const getGenresForIDs = (id, genres) => {
     const result = genres.find(genre => genre.id === id);
     if (result) {
-        return `${result.name} `;
+        return ` ${result.name}, `;
     }
     return ""
 };
@@ -24,6 +24,8 @@ const ListMovieItem = ({movie, genres}) => (
         <Poster url={movie.poster_path}/>
         <div><b>{movie.title}</b></div>
         <div>{`Rating: ${movie.vote_average}`}</div>
+        <div>{`Popularity: ${movie.popularity}`}</div>
+        Genres :
         <Genres genres={genres} genreIds={movie.genre_ids}/>
     </div>
 );

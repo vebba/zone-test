@@ -2,8 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
     overflow-y: scroll;
+}
+.list:after {
+    content: "";
+    justify-content: flex-start;
 }
 .listItem {
     flex:1;
