@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import {FILTER_BY_GENRE, RECEIVE_API_DATA_GENRES, RECEIVE_API_DATA_MOVIES} from '../actions'
-
+import {FILTER_BY_GENRE} from '../actions'
+import {FETCH_GENRES_SUCCESS, FETCH_MOVIES_SUCCESS} from "../types";
 
 const currentRate = (state = 3 , action) => {
     if(action.payload) {
@@ -11,8 +11,8 @@ const currentRate = (state = 3 , action) => {
 
 function genres(state = [], action) {
     switch (action.type) {
-        case RECEIVE_API_DATA_GENRES :
-            return action.data;
+        case FETCH_GENRES_SUCCESS :
+            return action.genres;
         default :
             return state
     }
@@ -34,8 +34,8 @@ function selectedGenres(state = [], action) {
 
 function movies(state = [], action) {
     switch (action.type) {
-        case RECEIVE_API_DATA_MOVIES :
-            return action.data;
+        case FETCH_MOVIES_SUCCESS :
+            return action.movies;
         default :
             return state
     }

@@ -3,7 +3,6 @@ import styles from "./styles.css";
 import ListMovie from "./ListMovie";
 
 const ListComponent = ({genres,items}) => {
-    console.log(items);
     return (
             <div className={styles.list}>
                 {items.length ?

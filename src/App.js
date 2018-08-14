@@ -10,8 +10,6 @@ export const App = () => (
             <PopularityFilter/>
             <Genres/>
         </div>
-
-
         <ListComponent/>
     </div>
 );
