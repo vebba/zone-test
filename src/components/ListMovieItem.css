@@ -7,9 +7,10 @@
 
 .poster figure {
     margin: 0;
-    height: 450px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    max-width: 500px;
+    min-height: 500px;
+    background: no-repeat left center;
+    background-size: contain;
 }
 .listItem div {
     padding-bottom: 0.5rem;

@@ -1,6 +1,4 @@
 .container {
-    flex: 0 0 170px;
-    max-width: 170px;
     padding-bottom: 1rem;
 }
 .container h4 {

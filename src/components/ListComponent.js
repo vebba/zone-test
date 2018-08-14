@@ -9,7 +9,7 @@ const ListComponent = ({genres,items}) => {
                 {items.length ?
                     <ListMovie items={items} genres={genres} />
                     :
-                    <div className={styles.noResults}>No Results</div>
+                    <div className={styles.noResults}>No movies for matching criteria</div>
                 }
             </div>
     )
