@@ -11,14 +11,14 @@ const GenreItem = ({name, id, onChange}) => (
     </label>
 );
 
-const Genres = ({genres = [], onGenreSelected}) => (
+const Genres = ({genres = [], onGenreSelected}) => {
+    return(
+        <div className={styles.genreList}>
+            {genres.map(item => <GenreItem key={item.id} onChange={onGenreSelected} name={item.name} id={item.id}/>)}
+        </div>
 
-    <div className={styles.genreList}>
-        {genres.map(item => <GenreItem key={item.id} onChange={onGenreSelected} name={item.name} id={item.id}/>)}
-    </div>
-
-);
-
+    );
+};
 const mapDispatchToProps = dispatch => ({
     onGenreSelected(id) {
         dispatch(filterByGenre(id))

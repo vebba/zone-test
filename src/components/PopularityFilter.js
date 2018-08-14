@@ -5,6 +5,7 @@ import {currentRate} from "../reducers/selectors";
 import * as styles from './PopularityFilter.css'
 
 const PopularityFilter = ({onChange, rate=3}) => {
+    console.log('RENDER POPULARITY FILTER');
     return (
         <div className={styles.container}>
             <h4>{`Minimum Rating: ${rate}`} </h4>

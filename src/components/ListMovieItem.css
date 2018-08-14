@@ -1,6 +1,6 @@
 .listItem {
     padding: 1rem;
-    box-shadow: 0 0 70px -30px rgba(0,0,0,0.75);
+    box-shadow: 0 0 60px -30px rgba(0,0,0,1);
     margin: 0.5rem;
     flex-basis: 0;
 }
@@ -14,4 +14,24 @@
 }
 .listItem div {
     padding-bottom: 0.5rem;
+}
+
+.listItem span {
+    font-size: 0.8rem;
+}
+.listItem span:after {
+    content: " /";
+}
+.listItem span:last-child:after {
+    content: "";
+}
+.popularity {
+    float: left;
+}
+.movieRating {
+    text-align: right;
+}
+.listItemTitle {
+    letter-spacing: 0.1rem;
+    font-weight: bold;
 }
