@@ -1,8 +1,9 @@
 .list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    flex-basis: 80%;
     justify-content: space-around;
     overflow-y: scroll;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
 }
 .list:after {
     content: "";
@@ -16,5 +17,6 @@
 
 }
 
-.listItem img {
+.noResults {
+
 }
