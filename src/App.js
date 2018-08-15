@@ -10,11 +10,9 @@ export const App = () => (
         <Header>
             <Genres/>
             <PopularityFilter/>
-            <SimpleButton>
+            <SimpleButton buttonType="MENU_OPEN">
                 <MenuIcon/>
             </SimpleButton>
-
-
         </Header>
         <ListComponent/>
     </div>

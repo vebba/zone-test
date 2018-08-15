@@ -1,3 +1,3 @@
 export const BUTTON_CLICKED = "BUTTON_CLICKED";
 
-export const onButtonClick = data => ({type:BUTTON_CLICKED, data});
+export const onButtonClick = buttonType => ({type:BUTTON_CLICKED, buttonType});

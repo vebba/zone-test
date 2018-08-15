@@ -6,13 +6,21 @@ import {header} from '../components/Header/reducer'
 
 const inittialAppState = {
     width: 0,
-    height:0
+    height:0,
+    posX:0,
+    posY:0
 };
 
-const app = (state, action) => {
+const app = (state = inittialAppState, action) => {
+    switch (action.type) {
+        case TYPES.APP_ON_RESIZE :
+            return {...state, size : action.size};
+        case TYPES.APP_ON_SCROLL :
+            return {...state, position: action.position};
 
-
-    return state;
+        default :
+            return state
+    }
 };
 
 const currentRate = (state = 3 , action) => {
@@ -55,6 +63,7 @@ function movies(state = [], action) {
 }
 
 const rootReducer = combineReducers({
+    app,
     selectedGenres,
     movies,
     currentRate,

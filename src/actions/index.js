@@ -13,3 +13,5 @@ export const requestApiData = data => ({type: TYPES.FETCH_DATA_REQUEST, data});
 export const receiveMovies = (data) => ({type: RECEIVE_API_DATA_MOVIES, data});
 export const receiveGenres = (data) => ({type: RECEIVE_API_DATA_GENRES, data});
 
+export const onAppResize = size => ({type: TYPES.APP_ON_RESIZE, size});
+export const onAppScroll = position => ({type: TYPES.APP_ON_SCROLL, position});
