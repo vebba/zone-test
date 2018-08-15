@@ -1,7 +1,7 @@
 ##Starting the project
 
 1. Clone project from repo 
-    * `git clone https://git.heroku.com/zone-test.git`<br/>
+    * `git clone https://github.com/vebba/zone-test.git`<br/>
 
 2. Navigate to project directory
     * `cd zone-test`
