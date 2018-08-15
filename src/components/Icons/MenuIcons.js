@@ -3,6 +3,7 @@ import * as styles from  './Icons.css';
 export default () => {
     return (
     	<div className={styles.icon} key="icon" >
+		<span>More filters</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 496 496">
 			<path d="M496 320.8c0 96.8-78.4 175.2-175.2 175.2H175.2C78.4 496 0 417.6 0 320.8V175.2C0 78.4 78.4 0 175.2 0h145.6C417.6 0 496 78.4 496 175.2v145.6z" fill="#00a6f9"/>
 			<path d="M0 175.2C0 78.4 78.4 0 175.2 0h145.6C417.6 0 496 78.4 496 175.2v145.6c0 96.8-78.4 175.2-175.2 175.2" fill="#0097f4"/>

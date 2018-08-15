@@ -2,6 +2,11 @@
     position: absolute;
     bottom: 0.8rem;
     right: 1rem;
+    display: flex;
+    align-items: center;
+}
+.icon span {
+    padding-right: 1rem;
 }
 svg {
     pointer-events: none;
