@@ -5,6 +5,7 @@
     overflow-y: scroll;
     padding-top: 53px;
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    -webkit-overflow-scrolling: touch;
 }
 .listItem {
     flex:1;

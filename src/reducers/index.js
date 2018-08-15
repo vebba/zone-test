@@ -3,6 +3,18 @@ import {FILTER_BY_GENRE} from '../actions'
 import * as TYPES from "../types";
 import {header} from '../components/Header/reducer'
 
+
+const inittialAppState = {
+    width: 0,
+    height:0
+};
+
+const app = (state, action) => {
+
+
+    return state;
+};
+
 const currentRate = (state = 3 , action) => {
     if(action.payload) {
         return action.payload

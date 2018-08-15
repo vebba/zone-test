@@ -8,7 +8,9 @@
     position: fixed;
     flex-wrap: wrap;
     background-color: white;
+    transform: translateY(-300px);
     transition: transform 500ms;
+    min-height: 100px;
 }
 
 

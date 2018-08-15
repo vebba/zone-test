@@ -26,9 +26,10 @@ class Header extends React.Component{
     render(){
         const {isOpen} = this.props.header;
         const hasHeight = this.state.height > 0;
-        const hidePosY = hasHeight ? `${60 - this.state.height}px` : "-100%";
+        const hidePosY = hasHeight ? `${60 - this.state.height}px` : "-600px";
+        console.log(hidePosY);
         const style = {
-            transform: `translateY(${isOpen ? hidePosY : 0})`
+            transform: `translateY(${isOpen ? "0" : hidePosY})`
         };
         return(
             <div ref={this.menuElement} style={style} className={styles.header} onClick={(e) => {
