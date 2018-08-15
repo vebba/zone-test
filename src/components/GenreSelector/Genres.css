@@ -4,16 +4,19 @@ input {
 
 .genreList {
     flex-basis: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 /* Customize the label (the container) */
 .genreItem {
 
     display: block;
     position: relative;
-    padding-right: 2.3rem;
-    margin-bottom: 12px;
+    min-width: 120px;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'PT Sans', sans-serif;
     user-select: none;
     white-space: nowrap;
@@ -30,7 +33,7 @@ input {
 .checkmark {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     height: 20px;
     width: 20px;
     background-color: #eee;

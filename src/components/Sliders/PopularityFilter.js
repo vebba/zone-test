@@ -8,7 +8,7 @@ const PopularityFilter = ({onChange, rate=3}) => {
     console.log('RENDER POPULARITY FILTER');
     return (
         <div className={styles.container}>
-            <h4>{`Minimum Rating: ${rate}`} </h4>
+            <h4>{`Minimum Rating | ${rate}`} | </h4>
             <input list="tickmarks" value={rate} type="range" min="0" max="10" step="0.5" onChange={e=>onChange(e.target.value)}/>
             <datalist id="tickmarks">
                 <option value="0" label="0"/>

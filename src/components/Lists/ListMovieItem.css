@@ -19,7 +19,7 @@
 .listItem span {
     font-size: 0.8rem;
 }
-.listItem span:after {
+.listItem > span:after {
     content: " /";
 }
 .listItem span:last-child:after {

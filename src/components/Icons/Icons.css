@@ -1,0 +1,8 @@
+.icon {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 1rem;
+}
+svg {
+    pointer-events: none;
+}
