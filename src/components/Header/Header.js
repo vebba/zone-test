@@ -32,9 +32,7 @@ class Header extends React.Component{
             transform: `translateY(${isOpen ? "0" : hidePosY})`
         };
         return(
-            <div ref={this.menuElement} style={style} className={styles.header} onClick={(e) => {
-                this.props.onMenuClick(e.target)
-            }}>
+            <div ref={this.menuElement} style={style} className={styles.header}>
                 {this.props.children}
             </div>
         )
