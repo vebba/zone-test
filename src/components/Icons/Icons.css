@@ -4,6 +4,7 @@
     right: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .icon span {
     padding-right: 1rem;
