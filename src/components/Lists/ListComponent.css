@@ -1,0 +1,20 @@
+.list {
+    display: grid;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 53px;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+.listItem {
+    flex:1;
+    padding: 1rem;
+    flex-basis: 0;
+
+
+}
+.noResults {
+    font-size: 1rem;
+    text-align: center;
+}
+

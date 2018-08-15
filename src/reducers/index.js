@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux'
 import {FILTER_BY_GENRE} from '../actions'
 import * as TYPES from "../types";
+import {header} from '../components/Header/reducer'
 
 const currentRate = (state = 3 , action) => {
     if(action.payload) {
@@ -41,12 +42,12 @@ function movies(state = [], action) {
     }
 }
 
-
 const rootReducer = combineReducers({
     selectedGenres,
     movies,
     currentRate,
-    genres
+    genres,
+    header
 });
 
 export default rootReducer

@@ -1,11 +1,4 @@
 .App {
   display: flex;
-  justify-content: flex-start;
-  height: 100vh;
+  flex-direction: column;
 }
-.AppSideBar {
-  padding: 1.2rem;
-  min-width: 210px;
-  text-align: right;
-}
-

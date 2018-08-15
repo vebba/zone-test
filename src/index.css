@@ -1,4 +1,4 @@
-body, h1, ul, li{
+body, h1, h2, h3, h4, input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -6,9 +6,11 @@ body, h1, ul, li{
   vertical-align: baseline;
   font-family: 'PT Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-body{
-  overflow: hidden;
-}
-div {
+div, header {
   box-sizing: border-box;
+}
+
+.hide {
+  transform: translateY(-200px);
+
 }

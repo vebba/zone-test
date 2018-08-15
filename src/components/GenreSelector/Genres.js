@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {filterByGenre} from "../actions";
+import {filterByGenre} from "../../actions";
 import * as styles from './Genres.css';
 
 const GenreItem = ({name, id, onChange}) => (

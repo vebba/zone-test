@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './ListMovieItem.css'
-import {BASE_IMG_URL} from "../const";
+import {BASE_IMG_URL} from "../../const";
 import Ratings from "./Ratings";
 
 const Poster = ({url}) => (

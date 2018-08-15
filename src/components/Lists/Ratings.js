@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './styles.css';
+import * as styles from './Ratings.css';
 const Ratings = ({rating, popularity}) => {
     return (
         <div className={styles.ratings}>
