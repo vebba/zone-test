@@ -5,16 +5,21 @@ import {header} from '../components/Header/reducer'
 
 
 const inittialAppState = {
-    width: 0,
-    height:0,
-    posX:0,
-    posY:0
+    size: {
+        width: 0,
+        height: 0
+    },
+    position: {
+        posX: 0,
+        posY: 0
+    }
+
 };
 
 const app = (state = inittialAppState, action) => {
     switch (action.type) {
         case TYPES.APP_ON_RESIZE :
-            return {...state, size : action.size};
+            return {...state, size: action.size};
         case TYPES.APP_ON_SCROLL :
             return {...state, position: action.position};
 
@@ -23,8 +28,8 @@ const app = (state = inittialAppState, action) => {
     }
 };
 
-const currentRate = (state = 3 , action) => {
-    if(action.payload) {
+const currentRate = (state = 3, action) => {
+    if (action.payload) {
         return action.payload
     }
     return state;

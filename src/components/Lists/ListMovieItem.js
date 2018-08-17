@@ -21,13 +21,18 @@ export const getGenresForIDs = (id, genres) => {
 const Genres = ({genres, genreIds}) => genreIds.map(id => <span key={id}>{getGenresForIDs(id, genres)}</span>);
 
 
-const ListMovieItem = ({movie, genres}) => (
-    <div className={styles.listItem}>
-        <Poster url={BASE_IMG_URL + movie.poster_path}/>
-        <div className={styles.listItemTitle}>{movie.title.toUpperCase()}</div>
-        <Ratings rating={movie.vote_average} popularity={movie.popularity}/>
-        <Genres genres={genres} genreIds={movie.genre_ids}/>
-    </div>
-);
+const ListMovieItem = ({movie, genres}) => {
+    const animStyles = {
+        opacity: 1
+    };
+    return (
+        <div className={styles.listItem} style={animStyles}>
+            <Poster url={BASE_IMG_URL + movie.poster_path}/>
+            <div className={styles.listItemTitle}>{movie.title.toUpperCase()}</div>
+            <Ratings rating={movie.vote_average} popularity={movie.popularity}/>
+            <Genres genres={genres} genreIds={movie.genre_ids}/>
+        </div>
+    )
+};
 
 export default ListMovieItem;

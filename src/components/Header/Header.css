@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     background-color: white;
     transform: translateY(-300px);
-    transition: transform 500ms;
+    transition: opacity 500ms, transform 500ms;
     min-height: 100px;
 }
 

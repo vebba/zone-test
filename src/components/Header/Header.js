@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './Header.css';
 
-class Header extends React.Component{
+class Header extends React.PureComponent{
     constructor(props){
         super(props);
         this.menuElement = React.createRef();
@@ -27,9 +27,9 @@ class Header extends React.Component{
         const {isOpen} = this.props.header;
         const hasHeight = this.state.height > 0;
         const hidePosY = hasHeight ? `${60 - this.state.height}px` : "-600px";
-        console.log(hidePosY);
         const style = {
-            transform: `translateY(${isOpen ? "0" : hidePosY})`
+            transform: `translateY(${isOpen ? "0" : hidePosY})`,
+            opacity: isOpen ? ".95" : "1"
         };
         return(
             <div ref={this.menuElement} style={style} className={styles.header}>
