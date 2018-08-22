@@ -8,3 +8,7 @@ export const FILTER_BY_GENRE = 'FILTER_BY_GENRE';
 export const MENU_OPEN = 'MENU_OPEN';
 export const APP_ON_RESIZE = "APP_ON_RESIZE";
 export const APP_ON_SCROLL = "APP_ON_SCROLL";
+export const SIDE_BAR_OPEN = "SIDE_BAR_OPEN";
+export const SIDE_BAR_CLOSE = "SIDE_BAR_CLOSE";
+export const ON_PAGE_SELECTED = "ON_PAGE_SELECTED";
+export const ON_GENRE_SELECTED = 'ON_GENRE_SELECTED';

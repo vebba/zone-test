@@ -1,21 +1,32 @@
 import React from 'react';
-import * as styles from './App.css';
 import {Genres} from "./components/GenreSelector";
 import {PopularityFilter, ListComponent, Header} from "./components";
-import {MenuIcon} from "./components/Icons";
-import SimpleButton from "./components/Buttons/SimpleButton";
+import SideBar from "./components/SideBars/SideBar";
+import Pagination from "./components/Pagination/Pagination";
 
 export const App = () => (
-    <div className={styles.App}>
-        <Header>
+    <div>
+        <SideBar>
+            <Pagination/>
+            <PopularityFilter/>
             <Genres/>
+        </SideBar>
+
+        {/*    <Genres/>
             <PopularityFilter/>
             <SimpleButton buttonType="MENU_OPEN">
                 <MenuIcon/>
-            </SimpleButton>
-        </Header>
-        <ListComponent/>
-    </div>
+            </SimpleButton>*/}
+            <div className="w3-main" style={{marginLeft: "200px"}}>
+                <Header/>
+                <ListComponent/>
+
+
+            </div>
+
+
+
+        </div>
 );
 
 

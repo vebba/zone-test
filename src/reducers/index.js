@@ -1,10 +1,11 @@
 import {combineReducers} from 'redux'
-import {FILTER_BY_GENRE} from '../actions'
 import * as TYPES from "../types";
 import {header} from '../components/Header/reducer'
+import {sideBar} from "../components/SideBars/reducer";
+import {pagination} from "../components/Pagination/reducer";
+import {genres , selectedGenres} from '../components/GenreSelector/reducer'
 
-
-const inittialAppState = {
+const initialAppState = {
     size: {
         width: 0,
         height: 0
@@ -12,11 +13,15 @@ const inittialAppState = {
     position: {
         posX: 0,
         posY: 0
+    },
+    sideBar: {
+        isOpen: false
     }
+
 
 };
 
-const app = (state = inittialAppState, action) => {
+const app = (state = initialAppState, action) => {
     switch (action.type) {
         case TYPES.APP_ON_RESIZE :
             return {...state, size: action.size};
@@ -35,28 +40,9 @@ const currentRate = (state = 3, action) => {
     return state;
 };
 
-function genres(state = [], action) {
-    switch (action.type) {
-        case TYPES.FETCH_GENRES_SUCCESS :
-            return action.genres;
-        default :
-            return state
-    }
-}
 
-function selectedGenres(state = [], action) {
-    switch (action.type) {
-        case FILTER_BY_GENRE :
-            if (!state.includes(action.id)) {
-                return [...state, action.id]
-            } else {
-                return state.filter(item => item !== action.id)
-            }
 
-        default :
-            return state
-    }
-}
+
 
 function movies(state = [], action) {
     switch (action.type) {
@@ -69,6 +55,8 @@ function movies(state = [], action) {
 
 const rootReducer = combineReducers({
     app,
+    sideBar,
+    pagination,
     selectedGenres,
     movies,
     currentRate,

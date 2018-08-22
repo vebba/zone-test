@@ -5,11 +5,15 @@ import ListMovie from "./ListMovie";
 const ListComponent = ({genres, items}) => {
     return (
         items.length ?
-            <div className={styles.list}>
+            <div className="w3-padding">
                 <ListMovie items={items} genres={genres}/>
             </div>
+
+
             :
-            <div className={styles.noResults}>No movies for matching criteria</div>
+            <div className={`${styles.noResults} w3-display-container`}>
+                <span className="w3-display-middle w3-xlarge">No movies for matching criteria</span>
+            </div>
 
 
     )

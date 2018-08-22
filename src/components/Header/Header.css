@@ -1,16 +1,5 @@
 .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    padding: 1rem 1.5rem 1rem 1.5rem;
-    box-shadow: 0 0 75px -30px rgba(0,0,0,1);
-    position: fixed;
-    flex-wrap: wrap;
-    background-color: white;
-    transform: translateY(-300px);
-    transition: opacity 500ms, transform 500ms;
-    min-height: 100px;
+
 }
 
 

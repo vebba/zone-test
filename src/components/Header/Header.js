@@ -1,44 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {ReduxContainerHOC} from '../HOC';
+import * as actionCreators from './actions'
 import * as styles from './Header.css';
+import {getGenresForIDs} from "./selectors";
 
-class Header extends React.PureComponent{
-    constructor(props){
-        super(props);
-        this.menuElement = React.createRef();
-        this.state =  {
-            height: 0
-        }
-    }
-    componentWillUnmount(){
-        window.removeEventListener("resize",()=>{});
-    }
-    componentDidMount(){
-        setTimeout(()=>
-        this.setState({
-            height: this.menuElement.current.offsetHeight
-        }),1000);
-        window.addEventListener("resize", (e) => {
-            this.setState({
-                height: this.menuElement.current.offsetHeight
-            })
-        },false)
-    }
-    render(){
-        const {isOpen} = this.props.header;
-        const hasHeight = this.state.height > 0;
-        const hidePosY = hasHeight ? `${60 - this.state.height}px` : "-600px";
-        const style = {
-            transform: `translateY(${isOpen ? "0" : hidePosY})`,
-            opacity: isOpen ? ".95" : "1"
-        };
-        return(
-            <div ref={this.menuElement} style={style} className={styles.header}>
-                {this.props.children}
+const Header = ({onMenuClick, selectedGenres}) => {
+    return (
+        <div className={`${styles.header} w3-top w3-hide-large`}>
+            <div className="w3-bar w3-white w3-xlarge">
+                <div onClick={onMenuClick} className="w3-bar-item w3-button w3-hide-large w3-left">☰</div>
+                <div className="w3-bar-item">Selected genres : <span>{selectedGenres}</span></div>
             </div>
-        )
+        </div>
+    );
+};
+
+Header.propTypes = {
+    selectedGenres: PropTypes.string,
+    onMenuClick: PropTypes.func
+};
+
+const mapStateToProps = state =>  (
+    {
+        selectedGenres : getGenresForIDs(state)
     }
+);
+export default ReduxContainerHOC(Header,mapStateToProps,actionCreators);
 
-}
-
-
-export default Header;

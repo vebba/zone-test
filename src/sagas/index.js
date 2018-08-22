@@ -1,16 +1,16 @@
-import {call, put, takeLatest} from 'redux-saga/effects'
+import {call, put, takeLatest , all} from 'redux-saga/effects'
 import * as TYPES from '../types';
 
 export const api = (url) => fetch(url).then(response => response.json());
 
 const MOVIES_API_KEY = process.env.REACT_APP_API_KEY || process.env.API_KEY;
 const GENRES_URL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${MOVIES_API_KEY}&language=en-US`;
-const MOVIES_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${MOVIES_API_KEY}&language=en-US&page=1`;
-
+const MOVIES_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${MOVIES_API_KEY}&language=en-US&page=`;
+const IMAGES_URL =  'https://image.tmdb.org/t/p/w500/';
 
 function* fetchMovies(action) {
     try {
-        const response = yield call(api, MOVIES_URL);
+        const response = yield call(api, `${MOVIES_URL}${ action ? action.pageID : "1"}`);
         //here state could be normalized
         yield put({type: TYPES.FETCH_MOVIES_SUCCESS, movies: response.results})
     } catch (e) {
@@ -41,5 +41,8 @@ function* fetchApiData() {
 
 
 export default function* mainSaga() {
-    yield takeLatest(TYPES.FETCH_DATA_REQUEST, fetchApiData)
+    yield all (
+        [takeLatest(TYPES.FETCH_DATA_REQUEST, fetchApiData),
+        takeLatest(TYPES.FETCH_MOVIES_REQUEST, fetchMovies)]
+    )
 }
